@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-phase vertical separator size calculator</title>
+    <script>"script.js"</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Two-phase vertical separator size calculator    </h1>
+    <form id="calculator-form">
+        <label for="qg">Enter Qg - gas flow rate:</label>
+        <input type="number" id="qg" name="qg" >
+        <br><br>
+        <label for="qo">Enter Qo - oil flow rate:</label>
+        <input type="number" id="qo" name="qo" >
+        <br><br>
+        <label for="qw">Enter Qw - water flow rate:</label>
+        <input type="number" id="qw" name="qw" >
+        <br><br>
+        <label for="po">Enter Po - operating pressure:</label>
+        <input type="number" id="po" name="po" >
+        <br><br>
+        <label for="to">Enter To - operating temrepature:</label>
+        <input type="number" id="to" name="to" >
+        <br><br>
+        <label for="sg">Enter Sg - specific gravity:</label>
+        <input type="number" id="sg" name="sg" >
+        <br><br>
+        <label for="sgo">Enter SG o - specific gravity of oil:</label>
+        <input type="number" id="sgo" name="sgo" >
+        <br><br>
+        <label for="sgw">Enter SG w - specific gravity of water:</label>
+        <input type="number" id="sgw" name="sgw" >
+        <br><br>
+        <label for="dm">Enter dm - droplet size removal:</label>
+        <input type="number" id="dm" name="dm" >
+        <br><br>
+        <img src="1.png" />
+        <br><br>
+        <label for="z">Enter z - compressibility factor:</label>
+        <input type="number" id="z" name="z" >
+        <br><br>
+        <img src="2.png" />
+        <br><br>
+        <label for="m">Enter µ - viscosity:</label>
+        <input type="number" id="m" name="m" >
+        <br><br>
+        <label for="tr">Enter tr - retention time:</label>
+        <input type="number" id="tr" name="tr" >
+        <br><br>
+        <h1>CDi = 0.34</h1>
+        
+        <table id="results-table">
+            <thead>
+              <tr>
+                <th>tr</th>
+                <th>d</th>
+                <th>h</th>
+                <th>Lss</th>
+                <th>Sr</th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th>24</th>
+                <th id="h324"></th>
+                <th id="l324"></th>
+                <th id="s324"></th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th>30</th>
+                <th id="h330"></th>
+                <th id="l330"></th>
+                <th id="s330"></th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th>36</th>
+                <th id="h336"></th>
+                <th id="l336"></th>
+                <th id="s336"></th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th>42</th>
+                <th id="h342"></th>
+                <th id="l342"></th>
+                <th id="s342"></th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th>48</th>
+                <th id="h348"></th>
+                <th id="l348"></th>
+                <th id="s348"></th>
+              </tr>
+              <tr>
+                <th>2</th>
+                <th>24</th>
+                <th id="h224"></th>
+                <th id="l224"></th>
+                <th id="s224"></th>
+              </tr>
+              <tr>
+                <th>2</th>
+                <th>30</th>
+                <th id="h230"></th>
+                <th id="l230"></th>
+                <th id="s230"></th>
+              </tr>
+              <tr>
+                <th>2</th>
+                <th>36</th>
+                <th id="h236"></th>
+                <th id="l236"></th>
+                <th id="s236"></th>
+              </tr>
+              <tr>
+                <th>2</th>
+                <th>42</th>
+                <th id="h242"></th>
+                <th id="l242"></th>
+                <th id="s242"></th>
+              </tr>
+              <tr>
+                <th>1</th>
+                <th>24</th>
+                <th id="h124"></th>
+                <th id="l124"></th>
+                <th id="s124"></th>
+              </tr>
+              <tr>
+                <th>1</th>
+                <th>30</th>
+                <th id="h130"></th>
+                <th id="l130"></th>
+                <th id="s130"></th>
+              </tr>
+              <tr>
+                <th>1</th>
+                <th>36</th>
+                <th id="h136"></th>
+                <th id="l136"></th>
+                <th id="s136"></th>
+              </tr>
+            </thead>
+          </table>
+
+        <button type="button" id="calculate-btn">Calculate</button>
+        <h1>It is recommended that you choose a diameter that corresponds to a Slenderness ratio value between 3 and 4.</h1>
+    </form>
+    <h2>Minimum diameter: <span id="result">0</span></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
